@@ -1,4 +1,4 @@
-#City of Boston Drupal Coding Challenge
+# City of Boston Drupal Coding Challenge
 
 ## Welcome!
 Thanks for your interest in being a software engineer on 
@@ -19,6 +19,8 @@ like this code challenge, that’s a good sign that you’ll be
 happy building things here.
 
 ## Project Setup
+
+### Download Lando
 Our goal is to standardize the local environment setup as much
 as possible to create a consistent experience for developers so 
 you can focues on actually writing code for the challenge. We've
@@ -30,25 +32,75 @@ use that instead, the intention of the Lando setup is simply to save
 you time. To get started with Lando, you first need to install it: 
 
 If you're on a Mac:
-1) install homebrew: `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-2) install lando: `brew cask install lando`
+1) Install homebrew: `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+2) Install lando: `brew cask install lando`
 
 If you're on Ubuntu:
-1) Open [this link](https://github.com/lando/lando/releases/download/v3.0.0-beta.40/lando-v3.0.0-beta.40.deb){:target="_blank"} and run the installer.
+1) Open [this link](https://github.com/lando/lando/releases/download/v3.0.0-beta.40/lando-v3.0.0-beta.40.deb) and run the installer.
 
 If you're on Windows (requires Windows 10):
-1) Open [this link](https://github.com/lando/lando/releases/download/v3.0.0-beta.40/lando-v3.0.0-beta.40.exe){:target="_blank"} and run the installer.
-2) Enable Hyper V, by opening PowerShell as an administrator and running: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All`
+1) Open [this link](https://github.com/lando/lando/releases/download/v3.0.0-beta.40/lando-v3.0.0-beta.40.exe) and run the installer.
+2) Enable Hyper V by opening PowerShell as an administrator and running: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All`
 
 For more Lando installation help, see the docs: https://docs.devwithlando.io/installation/installing.html
+
+### Clone the project
+We use Git to version control all our projects, so we're using it
+on this coding challenge as well. Clone a copy of this repository 
+to your local computer before getting started:
+`git clone https://github.com/jimafisk/drupal_coding_challenge.git`
+
+### Create the application
+1) In your terminal (command line), make sure you're inside the base folder of the project: `cd drupal_coding_challenge`
+2) Create the software stack using lando: `lando start`
+
+### Login to the application
+Visit the URL that lando creates for you and displays in the terminal. It will
+be unique to your environment, but should look something like this:
+http://localhost:32901. Then click "Log in" in the upper right and enter these
+credentials:
+- Username=admin
+- Password=admin
+Alternatively you can use `lando drush uli` but you'll need to adjust the baseurl
+for this to work.
 
 ## Data Structure
 We have two (2) content types in the system already created for you:
 1) Modules
 2) Maintainers
+These represent the types of information we're going to be pulling from the API
+on the Drupal project's website: https://www.drupal.org/drupalorg/docs/api
+
+Note that the Module content type has an entityreference to the Maintainers
+content type. Every module on Drupal.org has a person behind it that actually
+maintains the code. We're using the entityreference field to establish this 
+relationship between the two content types.
 
 ## The Data Feed
-We want to get
+We can get module information by looking through Drupal's node feed:
+https://www.drupal.org/api-d7/node.json
+
+We can also apply filters to this feed to narrow our dataset. For 
+example, we only want nodes for Contributed modules and maybe we only
+want ten (10) items to display for now:
 https://www.drupal.org/api-d7/node.json?type=project_module&limit=10 
 
+Similarly, we can retreive data about project maintainers from
+Drupal's API:
 https://www.drupal.org/project/drupal/maintainers.json
+
+There are services out there that will format JSON into an easy-to-read 
+format with a simple copy and paste: https://jsonformatter.curiousconcept.com/
+
+## The Code
+The code you're going to be writing is in a custom module called 
+`top_ten_modules`. 
+
+## Objective
+We want to pull in the top 10 most popular Modules from Drupal.org as 
+determined by the project's number of downloads (`field_download_count`). We
+Also want to pull in the corresponding profile information from the maintainers
+of these projects so we can display a quick thank you for their work on our site.
+The actual thank you will be displayed in a View that has already been created 
+for you. Your goal is to bring the relevant content into the system and establish
+the relationship between the Modules and the Maintainers.
