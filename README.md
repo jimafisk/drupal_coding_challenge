@@ -85,9 +85,27 @@ example, we only want nodes for Contributed modules and maybe we only
 want ten (10) items to display for now:
 https://www.drupal.org/api-d7/node.json?type=project_module&limit=10 
 
+**Hint:** If you wanted to top ten most popular Drupal modules you
+could apply sort criteria and filters like so:
+https://www.drupal.org/api-d7/node.json?type=project_module&sort=field_download_count&direction=DESC&limit=10
+
 Similarly, we can retreive data about project maintainers from
 Drupal's API:
 https://www.drupal.org/project/drupal/maintainers.json
+
+You can limit the Maintainers to a specific Module by referencing
+the Node ID (nid) of the project. So for example Buddy List 
+(https://www.drupal.org/project/buddylist) has a Node ID of
+`3230` so you can see Buddy List maintainers like so:
+https://www.drupal.org/project/3230/maintainers.json
+
+**NOTE**: The query endpoints will return up to 100 resources, paged.
+For example you could look through all users on Drupal.org page by 
+page like so: https://www.drupal.org/api-d7/user.json?page=1, 
+https://www.drupal.org/api-d7/user.json?page=2, etc.
+
+You can narrow down the User feed to a specific user by filtering the
+list by their ID like so: https://www.drupal.org/api-d7/user.json?uid=2747155
 
 There are services out there that will format JSON into an easy-to-read 
 format with a simple copy and paste: https://jsonformatter.curiousconcept.com/
