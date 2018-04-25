@@ -1,0 +1,19 @@
+uuid: 10317d53-4f89-4d56-b3a7-d08c8dd5512b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_url
+    - node.type.drupal_users
+id: node.drupal_users.field_profile_url
+field_name: field_profile_url
+entity_type: node
+bundle: drupal_users
+label: 'Profile URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

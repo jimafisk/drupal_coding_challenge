@@ -1,0 +1,28 @@
+uuid: efa3db2d-ba4d-4d9e-baea-165ef9d5a374
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maintainers
+    - node.type.drupal_users
+    - node.type.modules
+id: node.modules.field_maintainers
+field_name: field_maintainers
+entity_type: node
+bundle: modules
+label: Maintainers
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      drupal_users: drupal_users
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: c0cf8a16-9ce3-481a-b81c-49f420758893
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_download_count
+    - node.type.modules
+id: node.modules.field_download_count
+field_name: field_download_count
+entity_type: node
+bundle: modules
+label: 'Download Count'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

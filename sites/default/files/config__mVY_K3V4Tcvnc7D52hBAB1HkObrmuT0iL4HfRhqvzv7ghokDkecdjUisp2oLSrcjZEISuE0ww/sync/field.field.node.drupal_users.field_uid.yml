@@ -1,0 +1,23 @@
+uuid: 4231ff5d-991f-4387-9d07-fecfd9d2ab61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_uid
+    - node.type.drupal_users
+id: node.drupal_users.field_uid
+field_name: field_uid
+entity_type: node
+bundle: drupal_users
+label: 'User ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

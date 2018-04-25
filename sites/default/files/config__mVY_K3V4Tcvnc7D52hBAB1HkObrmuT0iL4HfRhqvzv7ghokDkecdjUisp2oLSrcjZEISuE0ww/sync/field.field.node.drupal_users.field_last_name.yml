@@ -1,0 +1,19 @@
+uuid: 6980bf7f-7d50-4e4b-bef5-43f6ca079e39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_last_name
+    - node.type.drupal_users
+id: node.drupal_users.field_last_name
+field_name: field_last_name
+entity_type: node
+bundle: drupal_users
+label: 'Last Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

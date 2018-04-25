@@ -1,0 +1,18 @@
+uuid: 248e26ab-4ec5-421a-9d7d-8c1dade0d0a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.drupal_users
+id: node.drupal_users.title
+field_name: title
+entity_type: node
+bundle: drupal_users
+label: Username
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: 0f634dbc-2ea2-431b-8723-745b695771b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.drupal_users
+  module:
+    - text
+id: node.drupal_users.body
+field_name: body
+entity_type: node
+bundle: drupal_users
+label: Bio
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,18 @@
+uuid: 0cad5e1f-887e-4ad7-9d84-c7e81d02d3c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Modules
+type: modules
+description: 'Use <em>modules</em> to display information about contributed Drupal modules from <a href="https://www.drupal.org/project/project_module">https://www.drupal.org/project/project_module</a>'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

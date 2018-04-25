@@ -1,0 +1,63 @@
+uuid: f647cda8-687d-4e24-ad2d-e1361b19d5bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.drupal_users.body
+    - field.field.node.drupal_users.field_first_name
+    - field.field.node.drupal_users.field_last_name
+    - field.field.node.drupal_users.field_profile_url
+    - field.field.node.drupal_users.field_uid
+    - node.type.drupal_users
+  module:
+    - text
+    - user
+id: node.drupal_users.default
+targetEntityType: node
+bundle: drupal_users
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_first_name:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_last_name:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_profile_url:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_uid:
+    weight: 102
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,28 @@
+uuid: 5121a002-89d2-41a3-8607-d4eb29166fcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.drupal_users.body
+    - node.type.drupal_users
+  module:
+    - text
+    - user
+id: node.drupal_users.teaser
+targetEntityType: node
+bundle: drupal_users
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

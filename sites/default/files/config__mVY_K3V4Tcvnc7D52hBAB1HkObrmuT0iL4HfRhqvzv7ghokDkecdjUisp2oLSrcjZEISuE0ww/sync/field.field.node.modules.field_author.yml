@@ -1,0 +1,28 @@
+uuid: b4a55585-5963-45c7-ac8e-6d42f3afa89f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author
+    - node.type.drupal_users
+    - node.type.modules
+id: node.modules.field_author
+field_name: field_author
+entity_type: node
+bundle: modules
+label: Author
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      drupal_users: drupal_users
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
