@@ -61,6 +61,7 @@ http://localhost:32901. Then click "Log in" in the upper right and enter these
 credentials:
 - Username=admin
 - Password=admin
+
 Alternatively you can use `lando drush uli` but you'll need to adjust the baseurl
 for this to work.
 
@@ -68,6 +69,7 @@ for this to work.
 We have two (2) content types in the system already created for you:
 1) Modules
 2) Maintainers
+
 These represent the types of information we're going to be pulling from the API
 on the Drupal project's website: https://www.drupal.org/drupalorg/docs/api
 
