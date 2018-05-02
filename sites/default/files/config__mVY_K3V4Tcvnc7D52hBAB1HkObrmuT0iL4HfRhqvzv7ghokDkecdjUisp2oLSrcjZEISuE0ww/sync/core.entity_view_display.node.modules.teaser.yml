@@ -25,4 +25,8 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_author: true
+  field_download_count: true
+  field_maintainers: true
+  field_project_url: true
