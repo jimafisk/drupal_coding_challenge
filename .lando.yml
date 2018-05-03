@@ -3,6 +3,7 @@ recipe: drupal8
 config:
   webroot: .
   drush: global:8.1.15
+  drupal: true
   xdebug: true
 services:
   appserver:
