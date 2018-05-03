@@ -9,4 +9,5 @@ services:
   appserver:
     # Add a Build Step to your App.
     run:
+      - "cd $LANDO_MOUNT && composer install"
       - "cd $LANDO_MOUNT && drush si standard --config-dir=sites/default/files/config__mVY_K3V4Tcvnc7D52hBAB1HkObrmuT0iL4HfRhqvzv7ghokDkecdjUisp2oLSrcjZEISuE0ww/sync/ --account-name=admin --account-pass=admin -y"
